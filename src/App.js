@@ -22,9 +22,10 @@ import {
   Editor,
 } from "./pages";
 import "./App.css";
+import { useStateContext } from "./contexts/ContextProvider";
 
 const App = () => {
-  const activeMenu = true;
+  const { activeMenu } = useStateContext();
   return (
     <div>
       <BrowserRouter>
@@ -58,7 +59,7 @@ const App = () => {
             }
           >
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
-              NavBar
+              <Navbar />
             </div>
           </div>
           <div>
