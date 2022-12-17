@@ -40,6 +40,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
+
     window.addEventListener("resize", handleResize);
 
     handleResize();
@@ -56,13 +57,14 @@ const Navbar = () => {
   }, [screenSize]);
 
   return (
-    <div className="flex justify-between p-2 md:mx-6 relative">
+    <div className="flex justify-between p-2 md:ml-6 md:mr-6 relative">
       <NavButton
         title="Menu"
         customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
         color="fuchsia"
         icon={<AiOutlineMenu />}
       />
+
       <div className="flex">
         <NavButton
           title="Cart"
@@ -86,7 +88,6 @@ const Navbar = () => {
         />
         <TooltipComponent content="Profile" position="BottomCenter">
           <div
-            // className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
             className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
             onClick={() => handleClick("userProfile")}
           >
