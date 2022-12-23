@@ -63,6 +63,7 @@ const App = () => {
             </div>
             <div>
               {/*Routes*/}
+              <ThemeSettings />
               <Routes>
                 {/*Dash*/}
                 <Route path="/" element={<Ecommerce />} />
