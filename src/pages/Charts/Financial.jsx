@@ -1,6 +1,7 @@
 import React from "react";
 import {
   ChartComponent,
+  SeriesCollectionDirective,
   SeriesDirective,
   Inject,
   HiloSeries,
@@ -9,8 +10,8 @@ import {
   Zoom,
   Logarithmic,
   Crosshair,
-  SeriesCollectionDirective,
 } from "@syncfusion/ej2-react-charts";
+
 import {
   financialChartData,
   FinancialPrimaryXAxis,
@@ -26,7 +27,6 @@ function filterValue(value) {
     return value.x, value.high, value.low;
   }
 }
-
 const returnValue = financialChartData.filter(filterValue);
 
 const Financial = () => {
